@@ -103,6 +103,7 @@ export default function Home() {
             </ul>
           </div>
         </section>
+
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -166,6 +167,23 @@ export default function Home() {
           GitHub
         </a>
       </footer>
+
+      {/* FOOTER*/}
+      <section className="bg-base-300">
+        <div className="flex justify-center items-center px-8 py-2 max-w-5xl mx-auto">
+          <div className="space-x-4">
+            <NavLink href="https://github.com/sabovoichita" target="_blank">
+              Github
+            </NavLink>
+            <NavLink
+              href="https://www.linkedin.com/in/voichita-maria-truscai/"
+              target="_blank"
+            >
+              LinkedIn
+            </NavLink>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
