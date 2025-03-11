@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ButtonLogin from "./components/ButtonLogic";
+import NavLink from "./components/NavLink";
 
 export default function Home() {
   const isLoggedIn = true;
@@ -10,7 +11,20 @@ export default function Home() {
       className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]"
     >
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
+        {/* HEADER*/}
+
+        <section className="bg-base-300">
+          <div className="flex justify-between items-center px-8 py-2 max-w-5xl mx-auto">
+            <div className="font-bold">Voichita Portofolio</div>
+            <div className="space-x-4">
+              <NavLink href="#pricing">Pricing</NavLink>
+              <NavLink href="#faq">FAQ</NavLink>
+            </div>
+            <div>
+              <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
+            </div>
+          </div>
+        </section>
         <Image
           className="dark:invert"
           src="/next.svg"
