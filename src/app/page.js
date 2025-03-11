@@ -25,6 +25,59 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* PRICING*/}
+        <section className="bg-base-300" id="pricing">
+          <div className="py-32 px-8 max-w-3xl mx-auto">
+            <p className="text-sm uppercase font-medium text-center text-primary mb-4">
+              Pricing
+            </p>
+            <h2 className="text-3xl lg:text-4xl font:extrabold mb-12 text-center">
+              A pricing that adapts for your needs
+            </h2>
+
+            <div className="p-8 bg-base-100 w-96 rounded-3xl mx-auto space-y-6">
+              <div className="flex gap-2 items-baseline">
+                <div className="text-4xl font-black">£19</div>
+                <div className="uppercase text-sm font-medium opacity:60">
+                  /month
+                </div>
+              </div>
+
+              <ul className="space-y-4">
+                {[
+                  "Collect customer feedback",
+                  "Unlimited boards",
+                  "Admin dashboards",
+                  "24/7 support",
+                ].map((priceItem) => (
+                  <li className="flex gap-2 items-center" key={priceItem}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="size-4 text-green-600 "
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                    {priceItem}
+                  </li>
+                ))}
+              </ul>
+
+              <ButtonLogin
+                isLoggedIn={isLoggedIn}
+                name={name}
+                extraStyle="w-full"
+              />
+            </div>
+          </div>
+        </section>
         <Image
           className="dark:invert"
           src="/next.svg"
