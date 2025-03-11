@@ -2,6 +2,7 @@ import Image from "next/image";
 import ButtonLogin from "./components/ButtonLogic";
 import NavLink from "./components/NavLink";
 import FAQListItem from "./components/FAQListItem";
+import productDemo from "@/app/images/1.png";
 
 export default function Home() {
   const isLoggedIn = true;
@@ -19,6 +20,26 @@ export default function Home() {
           <div>
             <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
           </div>
+        </div>
+      </section>
+
+      {/* HERO*/}
+      <section className="px-8 py-32 text-center lg:text-left max-w-5xl mx-auto flex flex-col lg:flex-row gap:14 items-center lg:items-start">
+        <Image
+          src={productDemo}
+          alt="Product Demo"
+          className="w-96 rounded-xl"
+        />
+
+        <div className="ml-6">
+          <h1 className="text-4x lg:text-5xl font-extrabold mb-6">
+            Collect Projects to build better products
+          </h1>
+          <div className="opacity-90 mb-10 ">
+            Create a portofolio board in years, prioritize features, and build
+            products your customers will love.
+          </div>
+          <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
         </div>
       </section>
 
