@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ButtonLogin from "./components/ButtonLogic";
 import NavLink from "./components/NavLink";
+import FAQListItem from "./components/FAQListItem";
 
 export default function Home() {
   const isLoggedIn = true;
@@ -76,6 +77,30 @@ export default function Home() {
                 extraStyle="w-full"
               />
             </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="bg-base-100" id="faq">
+          <div className="py-32 px-8 max-w-3xl mx-auto">
+            <p className="text-sm uppercase font-medium text-center text-primary mb-4">
+              FAQ
+            </p>
+            <h2 className="text-3xl lg:text-4xl font:extrabold mb-12 text-center">
+              Frequently Asked Questions
+            </h2>
+            <ul className="max-w-lg mx-auto">
+              {[
+                { question: "What do I get exactly?", answer: "Loreum Ipseum" },
+                { question: "Can I get a refund?", answer: "Loreum Ipseum" },
+                {
+                  question: "I have another question",
+                  answer: "Loreum Ipseum",
+                },
+              ].map((qa) => (
+                <FAQListItem key={qa.question} qa={qa} />
+              ))}
+            </ul>
           </div>
         </section>
         <Image
