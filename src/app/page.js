@@ -13,6 +13,9 @@ export default function Home() {
       <section className="bg-base-300">
         <div className="flex justify-between items-center px-8 py-2 max-w-5xl mx-auto">
           <div className="font-bold">Voichita Portofolio</div>
+          <div>
+            <NavLink href="dashboard">Projects</NavLink>
+          </div>
           <div className="space-x-4">
             <NavLink href="#pricing">Pricing</NavLink>
             <NavLink href="#faq">FAQ</NavLink>
