@@ -3,6 +3,7 @@ import ButtonLogin from "./components/ButtonLogic";
 import NavLink from "./components/NavLink";
 import FAQListItem from "./components/FAQListItem";
 import productDemo from "@/app/images/1.png";
+import ButtonProjects from "./components/ButtonProjects";
 
 export default function Home() {
   const isLoggedIn = true;
@@ -42,7 +43,7 @@ export default function Home() {
             Create a portofolio board in years, prioritize features, and build
             products your customers will love.
           </div>
-          <ButtonLogin isLoggedIn={isLoggedIn} name={name} />
+          <ButtonProjects isLoggedIn={isLoggedIn} name={name} />
         </div>
       </section>
 
